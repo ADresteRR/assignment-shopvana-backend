@@ -18,11 +18,15 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-
-def serverCheck():
+from django.http import JsonResponse
+def serverCheck(request):
     print('server is running fine')
+    return JsonResponse({
+        "success": True,
+        "msg": "server is working fine"
+    })
 urlpatterns = [
-    path("/", serverCheck),
+    path("", serverCheck),
     path('orders/', include('orders.urls')),
     path('admin/', admin.site.urls),
 ]
