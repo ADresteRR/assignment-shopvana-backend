@@ -79,7 +79,7 @@ TEMPLATES = [
         },
     },
 ]
-
+ALLOWED_HOSTS = ['assignment-shopvana-backend-1.onrender.com', 'localhost', '127.0.0.1']
 WSGI_APPLICATION = 'restaurant.wsgi.application'
 
 
